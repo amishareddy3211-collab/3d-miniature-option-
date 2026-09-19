@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>3D Miniature Collection</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#111,#444);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:16px;
+    opacity:.9;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:26px;
+    margin:25px 0 20px;
+}
+
+/* PHOTO GALLERY */
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.photo-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.photo-card img{
+    width:100%;
+    height:220px;
+    display:block;
+    object-fit:cover;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.photo-card img:hover{
+    transform:scale(1.03);
+}
+
+/* VIDEO */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.video-card{
+    background:white;
+    padding:10px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.video-card video{
+    width:100%;
+    display:block;
+    border-radius:8px;
+    background:#000;
+}
+
+.video-title{
+    text-align:center;
+    font-weight:bold;
+    padding:10px 5px 5px;
+}
+
+/* BUTTON */
+
+.order-box{
+    text-align:center;
+    margin:35px 0;
+}
+
+.order-btn{
+    display:inline-block;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* IMAGE POPUP */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.92);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal img{
+    max-width:95%;
+    max-height:90%;
+    object-fit:contain;
+    border-radius:8px;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:25px;
+    color:white;
+    font-size:42px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+}
+
+@media(max-width:450px){
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo-card img{
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>3D Miniature Collection</h1>
+    <p>Explore Our Custom 3D Miniature Designs</p>
+</header>
+
+<div class="container">
+
+    <!-- PHOTOS -->
+
+    <h2 class="section-title">Our 3D Miniatures</h2>
+
+    <div class="photo-grid">
+
+        <div class="photo-card">
+            <img src="./miniature-1.jpg" alt="3D Miniature 1" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-2.jpg" alt="3D Miniature 2" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-3.jpg" alt="3D Miniature 3" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-4.jpg" alt="3D Miniature 4" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-5.jpg" alt="3D Miniature 5" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-6.jpg" alt="3D Miniature 6" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-7.jpg" alt="3D Miniature 7" onclick="openImage(this.src)">
+        </div>
+
+        <div class="photo-card">
+            <img src="./miniature-8.jpg" alt="3D Miniature 8" onclick="openImage(this.src)">
+        </div>
+
+    </div>
+
+
+    <!-- VIDEOS -->
+
+    <h2 class="section-title">Our Videos</h2>
+
+    <div class="video-grid">
+
+        <div class="video-card">
+            <video controls playsinline preload="metadata">
+                <source src="./video-1.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <div class="video-title">3D Miniature Video 1</div>
+        </div>
+
+        <div class="video-card">
+            <video controls playsinline preload="metadata">
+                <source src="./video-2.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <div class="video-title">3D Miniature Video 2</div>
+        </div>
+
+        <div class="video-card">
+            <video controls playsinline preload="metadata">
+                <source src="./video-3.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <div class="video-title">3D Miniature Video 3</div>
+        </div>
+
+        <div class="video-card">
+            <video controls playsinline preload="metadata">
+                <source src="./video-4.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <div class="video-title">3D Miniature Video 4</div>
+        </div>
+
+        <div class="video-card">
+            <video controls playsinline preload="metadata">
+                <source src="./video-5.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <div class="video-title">3D Miniature Video 5</div>
+        </div>
+
+    </div>
+
+
+    <!-- ORDER BUTTON -->
+
+    <div class="order-box">
+        <a class="order-btn" href="https://t.me/Riya_31bot" target="_blank">
+            Order / Contact Us
+        </a>
+    </div>
+
+</div>
+
+
+<!-- IMAGE POPUP -->
+
+<div class="modal" id="imageModal" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img id="popupImage" src="" alt="Preview">
+</div>
+
+
+<script>
+function openImage(src){
+    document.getElementById("popupImage").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage(){
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+```
+  
