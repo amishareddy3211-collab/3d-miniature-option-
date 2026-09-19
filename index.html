@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Custom 3D Miniatures - handcrafted figurines made from your memories.">
+<title>3D Miniature | Custom Figurines</title>
+<style>
+:root{--dark:#17120e;--gold:#c99445;--cream:#fffaf3;--muted:#6f6258;--card:#fff;--line:#eadfce}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:var(--dark)}
+a{text-decoration:none;color:inherit}.top{background:#111;color:#fff;text-align:center;padding:10px;font-weight:700;font-size:14px}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,250,243,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:14px 5%}
+.logo{font-size:21px;font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:20px;align-items:center;font-weight:700;font-size:14px}.btn{display:inline-block;background:var(--dark);color:#fff;padding:13px 20px;border-radius:999px;font-weight:800;border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:#17120e}.hero{padding:55px 5% 35px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;max-width:1250px;margin:auto}
+.badge{display:inline-block;background:#f1e3cf;color:#6e4b22;padding:8px 13px;border-radius:999px;font-size:13px;font-weight:800}
+h1{font-size:clamp(40px,6vw,72px);line-height:.98;margin:18px 0}.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:650px}
+.hero-card{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 25px 60px #6e4b2230}.hero-card img{width:100%;height:500px;object-fit:cover;display:block}.trust{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.trust div{background:#fff;border:1px solid var(--line);padding:10px 13px;border-radius:12px;font-size:13px;font-weight:800}
+section{padding:60px 5%;max-width:1250px;margin:auto}section h2{text-align:center;font-size:36px;margin:0 0 12px}section>p.lead{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:700px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.gallery img{width:100%;height:280px;object-fit:cover;border-radius:18px;cursor:pointer;transition:.25s;box-shadow:0 10px 30px #00000012}.gallery img:hover{transform:translateY(-3px)}
+.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.videos video{width:100%;border-radius:18px;background:#111;box-shadow:0 10px 30px #00000018}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info-card{background:#fff;padding:25px;border:1px solid var(--line);border-radius:20px}.icon{font-size:30px}.info-card h3{margin:10px 0 5px}.info-card p{color:var(--muted);line-height:1.6}
+.pricebox{background:#17120e;color:#fff;border-radius:25px;padding:30px;overflow:auto}.pricebox table{width:100%;border-collapse:collapse;min-width:620px}.pricebox th,.pricebox td{padding:14px;text-align:center;border-bottom:1px solid #ffffff25}.pricebox th{color:#f2ca8b}
+.booking{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;max-width:850px;margin:auto;box-shadow:0 18px 50px #0000000d}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;font-size:14px}.field input,.field select,.field textarea{width:100%;padding:14px;border:1px solid #d9cbb8;border-radius:12px;font:inherit;background:#fff}.summary{margin:20px 0;padding:20px;background:#f8f0e5;border-radius:16px}.summary strong{font-size:22px}.wa{width:100%;background:#25D366;color:#071b0d;margin-top:8px;font-size:17px}
+footer{background:#17120e;color:#fff;padding:40px 5%;text-align:center}.small{color:#cdbfae;font-size:13px;line-height:1.6}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:50;align-items:center;justify-content:center;padding:20px}.modal img{max-width:95vw;max-height:90vh;border-radius:15px}.modal.show{display:flex}.close{position:fixed;top:18px;right:22px;color:#fff;font-size:35px;cursor:pointer}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:35px}.hero-card img{height:390px}.gallery{grid-template-columns:repeat(2,1fr)}.info{grid-template-columns:1fr}.videos{grid-template-columns:1fr}.navlinks a:not(.btn){display:none}.grid{grid-template-columns:1fr}}
+@media(max-width:500px){section{padding:45px 4%}.gallery img{height:210px}h1{font-size:44px}.hero-card img{height:340px}}
+</style>
+</head>
+<body>
+<div class="top">😊 All India Delivery Available &nbsp; | &nbsp; 50% Advance Payment Required</div>
+<nav>
+  <div class="logo">3D <span>MINIATURE</span></div>
+  <div class="navlinks"><a href="#gallery">Gallery</a><a href="#prices">Prices</a><a class="btn gold" href="#booking">Book 3D Miniature</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">HANDCRAFTED • CUSTOM MADE</span>
+    <h1>Turn Your Memories Into A Beautiful 3D Miniature.</h1>
+    <p>Choose your miniature type and size, upload your photo, and send your complete order directly on WhatsApp.</p>
+    <div class="trust">
+      <div>🚚 All India Delivery</div><div>⏱️ 3–4 Days Delivery</div><div>💳 50% Advance</div><div>📍 Jaipur, Rajasthan</div>
+    </div>
+    <a class="btn gold" href="#booking">Book Your 3D Miniature →</a>
+  </div>
+  <div class="hero-card"><img src="assets/miniature-1.jpg" alt="Custom 3D miniature"></div>
+</header>
+
+<section id="gallery">
+  <h2>Our 3D Miniature Gallery</h2>
+  <p class="lead">Real examples of custom figurines and personalised miniature creations.</p>
+  <div class="gallery">
+    <img src="assets/miniature-1.jpg" alt="3D miniature 1" onclick="openImg(this.src)">
+    <img src="assets/miniature-2.jpg" alt="3D miniature 2" onclick="openImg(this.src)">
+    <img src="assets/miniature-3.jpg" alt="3D miniature 3" onclick="openImg(this.src)">
+    <img src="assets/miniature-4.jpg" alt="3D miniature 4" onclick="openImg(this.src)">
+    <img src="assets/miniature-5.jpg" alt="3D miniature 5" onclick="openImg(this.src)">
+    <img src="assets/miniature-6.jpg" alt="3D miniature 6" onclick="openImg(this.src)">
+    <img src="assets/miniature-7.jpg" alt="3D miniature 7" onclick="openImg(this.src)">
+    <img src="assets/miniature-8.jpg" alt="3D miniature 8" onclick="openImg(this.src)">
+  </div>
+</section>
+
+<section>
+  <h2>See The Making & Finished Work</h2>
+  <p class="lead">Watch the videos to see the miniature work and presentation.</p>
+  <div class="videos">
+    <video controls playsinline preload="metadata"><source src="assets/video-1.mp4" type="video/mp4"></video>
+    <video controls playsinline preload="metadata"><source src="assets/video-2.mp4" type="video/mp4"></video>
+    <video controls playsinline preload="metadata"><source src="assets/video-3.mp4" type="video/mp4"></video>
+    <video controls playsinline preload="metadata"><source src="assets/video-4.mp4" type="video/mp4"></video>
+    <video controls playsinline preload="metadata"><source src="assets/video-5.mp4" type="video/mp4"></video>
+  </div>
+</section>
+
+<section>
+  <div class="info">
+    <div class="info-card"><div class="icon">💳</div><h3>50% Advance</h3><p>50% payment is required to confirm the printing order. The remaining amount can be settled as per your order arrangement.</p></div>
+    <div class="info-card"><div class="icon">🚚</div><h3>All India Delivery</h3><p>Delivery available across India. Expected delivery time is 3–4 days.</p></div>
+    <div class="info-card"><div class="icon">📍</div><h3>Our Location</h3><p>Jaipur, Rajasthan. For order confirmation and delivery details, contact us on WhatsApp.</p></div>
+  </div>
+</section>
+
+<section id="prices">
+  <h2>Size & Price</h2>
+  <p class="lead">Select Single, Couple or Family while booking. Prices update automatically.</p>
+  <div class="pricebox">
+    <table>
+      <tr><th>Size</th><th>🧔 Single</th><th>👩❤️👨 Couple</th><th>👨👩👧 Family</th></tr>
+      <tr><td>8 inch</td><td>₹1,200</td><td>₹1,800</td><td>₹2,000</td></tr>
+      <tr><td>12 inch</td><td>₹1,800</td><td>₹2,500</td><td>₹3,000</td></tr>
+      <tr><td>16 inch</td><td>₹2,500</td><td>₹3,500</td><td>₹4,000</td></tr>
+      <tr><td>20 inch</td><td>₹3,000</td><td>₹4,500</td><td>₹5,000</td></tr>
+      <tr><td>24 inch</td><td>₹3,500</td><td>₹5,000</td><td>₹6,000</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Book Your 3D Miniature</h2>
+  <p class="lead">Fill the details below. Your order summary will open directly in WhatsApp.</p>
+  <div class="booking">
+    <div class="grid">
+      <div class="field"><label>Name *</label><input id="name" placeholder="Your name"></div>
+      <div class="field"><label>WhatsApp Number *</label><input id="phone" inputmode="tel" placeholder="Your WhatsApp number"></div>
+      <div class="field"><label>Miniature Type *</label>
+        <select id="type" onchange="updatePrice()">
+          <option value="Single">🧔 Single</option>
+          <option value="Couple">👩❤️👨 Couple</option>
+          <option value="Family">👨👩👧 Family</option>
+        </select>
+      </div>
+      <div class="field"><label>Size *</label>
+        <select id="size" onchange="updatePrice()">
+          <option value="8">8 inch</option><option value="12">12 inch</option><option value="16">16 inch</option><option value="20">20 inch</option><option value="24">24 inch</option>
+        </select>
+      </div>
+      <div class="field full"><label>Delivery Address *</label><textarea id="address" rows="3" placeholder="Full delivery address"></textarea></div>
+      <div class="field full"><label>Upload Your Photo *</label><input id="photo" type="file" accept="image/*"></div>
+    </div>
+    <div class="summary">
+      <div>Selected: <b id="selected">Single • 8 inch</b></div>
+      <div>Total Price: <strong id="total">₹1,200</strong></div>
+      <div>50% Advance: <strong id="advance">₹600</strong></div>
+    </div>
+    <button class="btn wa" onclick="sendWhatsApp()">📲 Send Order on WhatsApp</button>
+    <p class="small" style="text-align:center;margin-bottom:0">After sending the order on WhatsApp, please send the selected photo in the same WhatsApp chat. The website cannot attach a local photo file automatically to WhatsApp.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">3D <span>MINIATURE</span></div>
+  <p>All India Delivery Available 😊</p>
+  <p class="small">50% payment is required to place the printing order • Delivery time 3–4 days • Jaipur, Rajasthan</p>
+  <a class="btn gold" href="#booking">Book 3D Miniature</a>
+</footer>
+
+<div class="modal" id="modal" onclick="closeImg()"><span class="close">×</span><img id="modalImg" alt="Preview"></div>
+
+<script>
+const prices={
+ Single:{8:1200,12:1800,16:2500,20:3000,24:3500},
+ Couple:{8:1800,12:2500,16:3500,20:4500,24:5000},
+ Family:{8:2000,12:3000,16:4000,20:5000,24:6000}
+};
+function money(n){return "₹"+n.toLocaleString("en-IN")}
+function updatePrice(){
+ const type=document.getElementById("type").value, size=document.getElementById("size").value;
+ const total=prices[type][size], advance=total/2;
+ document.getElementById("selected").textContent=type+" • "+size+" inch";
+ document.getElementById("total").textContent=money(total);
+ document.getElementById("advance").textContent=money(advance);
+}
+function sendWhatsApp(){
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const type=document.getElementById("type").value;
+ const size=document.getElementById("size").value;
+ const address=document.getElementById("address").value.trim();
+ const photo=document.getElementById("photo").files[0];
+ if(!name||!phone||!address||!photo){alert("Please fill Name, WhatsApp Number, Address and upload your photo.");return;}
+ const total=prices[type][size], advance=total/2;
+ const msg=`Hello, I want to order a 3D Miniature.%0A%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0AType: ${encodeURIComponent(type)}%0ASize: ${encodeURIComponent(size+" inch")}%0ATotal Price: ${encodeURIComponent(money(total))}%0A50%25 Advance: ${encodeURIComponent(money(advance))}%0ADelivery Address: ${encodeURIComponent(address)}%0A%0AI will send the selected photo in this WhatsApp chat.`;
+ window.open("https://wa.me/919244907634?text="+msg,"_blank");
+}
+function openImg(src){document.getElementById("modalImg").src=src;document.getElementById("modal").classList.add("show")}
+function closeImg(){document.getElementById("modal").classList.remove("show")}
+updatePrice();
+</script>
+</body>
+  </html>
