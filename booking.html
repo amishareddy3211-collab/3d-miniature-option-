@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Murti - Price List | Golden Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background: #0a0a0a;color:#fff;font-family:'Inter',sans-serif;padding:20px}
+.gold-text{background: linear-gradient(90deg,#FFD700,#FFA500,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Cinzel',serif}
+.box{max-width:600px;margin:0 auto;border:1.5px solid #FFD700;border-radius:24px;padding:28px;background:linear-gradient(180deg,#1a1a1a,#121212);box-shadow:0 0 40px rgba(255,215,0,0.15)}
+.header{text-align:center;border-bottom:1px solid #333;padding-bottom:18px;margin-bottom:18px}
+.header h1{font-size:28px;letter-spacing:2px}
+.header p{font-size:12px;color:#aaa;margin-top:6px;letter-spacing:1px}
+.badge{display:inline-block;background:linear-gradient(90deg,#FFD700,#FFA500);color:#111;padding:6px 14px;border-radius:20px;font-weight:800;font-size:11px;margin-top:12px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.info div{background:#111;border:1px solid #2a2a2a;padding:10px 12px;border-radius:12px;font-size:12px}
+.info div b{color:#FFD700;display:block;font-size:10px;margin-bottom:2px;letter-spacing:1px}
+.card{margin-top:22px;background:#111;border:1px solid #FFD700;border-radius:16px;overflow:hidden}
+.card-head{padding:12px 16px;background:linear-gradient(90deg,#FFD700,#FFA500);color:#111;font-weight:800;font-family:'Cinzel',serif;display:flex;justify-content:space-between}
+.card-body{padding:10px 16px}
+.row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed #2a2a2a;font-size:14px}
+.row:last-child{border:none}
+.row span:last-child{color:#FFD700;font-weight:700}
+.note{margin-top:20px;background:rgba(255,215,0,0.08);border:1px dashed #FFD700;padding:14px;border-radius:12px;font-size:12px;color:#ddd;text-align:center}
+.btn{width:100%;margin-top:18px;padding:16px;background:linear-gradient(90deg,#FFD700,#FFA500);border:none;border-radius:14px;font-weight:800;font-size:15px;letter-spacing:1px;cursor:pointer;color:#111}
+.upi{margin-top:14px;text-align:center;font-size:12px;color:#888}
+.upi b{color:#FFD700}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="header">
+<h1 class="gold-text">3D MURTI ARTS</h1>
+<p>JAIPUR, RAJASTHAN | ALL INDIA DELIVERY</p>
+<div class="badge">50% ADVANCE ON ORDER CONFIRMATION</div>
+</div>
+
+<div class="info">
+<div><b>DELIVERY TIME</b> 3-4 Days</div>
+<div><b>DELIVERY</b> All India Available 😊</div>
+<div><b>PAYMENT</b> 50% Advance</div>
+<div><b>UPI ID</b> dlpatel12324@oksbi</div>
+</div>
+
+<!-- SINGLE -->
+<div class="card">
+<div class="card-head"><span>🧍 SINGLE</span><span>Best Seller</span></div>
+<div class="card-body">
+<div class="row"><span>8 inch</span><span>₹1200/-</span></div>
+<div class="row"><span>12 inch</span><span>₹1800/-</span></div>
+<div class="row"><span>16 inch</span><span>₹2500/-</span></div>
+<div class="row"><span>20 inch</span><span>₹3000/-</span></div>
+<div class="row"><span>24 inch</span><span>₹3500/-</span></div>
+</div>
+</div>
+
+<!-- COUPLE -->
+<div class="card">
+<div class="card-head"><span>👩‍❤️‍👨 COUPLE</span><span>Couple Special</span></div>
+<div class="card-body">
+<div class="row"><span>8 inch</span><span>₹1800/-</span></div>
+<div class="row"><span>12 inch</span><span>₹2500/-</span></div>
+<div class="row"><span>16 inch</span><span>₹3500/-</span></div>
+<div class="row"><span>20 inch</span><span>₹4500/-</span></div>
+<div class="row"><span>24 inch</span><span>₹5000/-</span></div>
+</div>
+</div>
+
+<!-- FAMILY -->
+<div class="card">
+<div class="card-head"><span>👨‍👩‍👧 FAMILY</span><span>Premium</span></div>
+<div class="card-body">
+<div class="row"><span>8 inch</span><span>₹2000/-</span></div>
+<div class="row"><span>12 inch</span><span>₹3000/-</span></div>
+<div class="row"><span>16 inch</span><span>₹4000/-</span></div>
+<div class="row"><span>20 inch</span><span>₹5000/-</span></div>
+<div class="row"><span>24 inch</span><span>₹6000/-</span></div>
+</div>
+</div>
+
+<div class="note">
+50% Payment pahle lagega sir.<br>
+Baki 50% delivery se pehle.
+</div>
+
+<button class="btn" onclick="window.open('https://wa.me/91XXXXXXXXXX?text=Hi, I want 3D Murti','_blank')">ORDER ON WHATSAPP</button>
+<div class="upi">UPI Payment: <b>dlpatel12324@oksbi</b><br><img id="qr" style="margin-top:10px;background:#fff;padding:8px;border-radius:12px" width="150"></div>
+</div>
+
+<script>
+const upi = "dlpatel12324@oksbi";
+document.getElementById('qr').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=${upi}&pn=3DMurtiArts&cu=INR`;
+</script>
+</body>
+  </html>
